@@ -25,7 +25,7 @@ void	ft_putchar(char c)
 
 int	main(int argc, char const *argv[])
 {
-	$3;
+	$3
 	$NAME($2);
 	return 0;
 }
