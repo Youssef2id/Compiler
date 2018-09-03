@@ -12,8 +12,11 @@
 
 #!/bin/bash
 
+
  echo $1 | sed 's/.$//' | sed 's/.$//' > name;
  NAME=$(<name)
+ echo ${NAME##*/} > name;
+ NAME=$(<name);
 echo "
 void	ft_putchar(char c)
 {
@@ -62,7 +65,7 @@ echo "
 "
 gcc -o cm cm.c
 
-./cm
+./cm | cat -e
 echo "
 
 **************************************************************************
@@ -71,6 +74,3 @@ echo "
 "
 rm cm;
 rm cm.c;
-
-
-
